@@ -11,10 +11,12 @@ const orderQueue =[]
     menu.push(pizzaObj);
  }
 
+ let nextOrderId =0;
  function placeOrder(pizzaName){
     const selectedPizza = menu.find(obj=> obj.name === pizzaName);
     cashInregistor += selectedPizza.price;
-    const newObj =  { pizza: selectedPizza, status: "ordered" }
+    nextOrderId++;
+    const newObj =  {id:nextOrderId, pizza: selectedPizza, status: "ordered" }
     orderQueue.push(newObj);
     return newObj;
  }

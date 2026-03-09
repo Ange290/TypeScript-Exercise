@@ -10,7 +10,7 @@ interface Address {
 }
 interface Customer {
     name: string;
-    address?: Address
+    address: Address
 }
 interface Order {
     customer: Customer;

@@ -5,13 +5,26 @@
 // TypeScript types.
 
 
-const logOrder = (order: any) => {
+interface Address {
+    city: string;
+}
+interface Customer {
+    name: string;
+    address?: Address
+}
+interface Order {
+    customer: Customer;
+}
+
+const logOrder = (order: Order) => {
   console.log(`Shipping to: ${order.customer.address.city}`);
 };
 
 logOrder({
   customer: {
     name: 'Jane',
-    // address is missing
+    address:{
+        city: 'Kigali'
+    }
   }
 });

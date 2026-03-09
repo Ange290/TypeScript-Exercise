@@ -1,7 +1,7 @@
 // Solve all the typing issues in the code without changing the implementation
 
-export function concatenate(...strings: any): boolean {
+export function concatenate(...strings: any[]): string {
   return strings.join('');
 }
 
-concatenate('Hello', 'Hi', 'Hola');
+console.log(concatenate('Hello', 'Hi', 'Hola'));
